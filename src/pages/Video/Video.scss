@@ -1,4 +1,4 @@
-@import 'Vars';
+@import '../../styles/Vars';
 
 
 .top-part {
@@ -9,6 +9,56 @@
     @media screen and (max-width: 900px) {
         flex-direction: column;
         margin-top: 20px;
+    }
+}
+
+.main-video {
+    background-color: #1a1a1a;
+    padding: 50px 40px;
+}
+
+.video-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-title {
+    margin-top: 0;
+    color: #eeeeee;
+}
+
+.video-description {
+    color: #888888;
+    font-size: 20px;
+}
+
+.video-img {
+    height: 600px;
+    display: flex;
+    margin: auto;
+}
+
+.video-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto 10px auto;
+    padding: 15px 25px;
+    border-radius: 40px;
+    width: fit-content;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: rgb(212, 212, 212);
     }
 }
 

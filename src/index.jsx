@@ -2,7 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import Logement from './pages/Logement'
+import Video from './pages/Video'
 import APropos from './pages/APropos'
 import Error404 from './pages/Error404'
 import './styles/Global.scss'
@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Logement/:id" element={<Logement />} />
+        <Route path="/Video/:id" element={<Video />} />
         <Route path="/APropos" element={<APropos />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

@@ -3,11 +3,9 @@
 .block-cards {
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 100px 40px;
     gap: 50px;
-    background-color: #F6F6F6;
-    border-radius: $border-radius;
-    margin-top: 60px;
+    background-color: #1a1a1a;
     justify-content: center;
 
     @media screen and (max-width: 1300px) {
