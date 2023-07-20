@@ -1,0 +1,23 @@
+@import 'Vars';
+
+.tags {
+    gap: 20px;
+    display: flex;
+    margin-top: 20px;
+
+    @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background-color: $primary-color;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 30px;
+
+        @media screen and (max-width: 900px) {
+            padding: 5px 20px;
+            font-size: 12px;
+        }
+    }
+}

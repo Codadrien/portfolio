@@ -1,0 +1,56 @@
+@import 'Vars';
+
+.slider {
+    position: relative;
+
+    .slider-img {
+        height: 400px;
+        width: 100%;
+        border-radius: $slider-radius;
+        object-fit: cover;
+        user-select: none;
+
+        @media screen and (max-width: 700px) {
+            height: 250px;
+        }
+    }
+
+    .swiper-right,
+    .swiper-left {
+        position: absolute;
+        content: url("../img/swiper.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        @media screen and (max-width: 700px) {
+            scale: 0.3;
+            top: 36%;
+        }
+    }
+
+    .swiper-left {
+        @media screen and (max-width: 700px) {
+            left: -30px;
+        }
+    }
+
+    .swiper-right {
+        right: 0;
+        transform: scaleX(-1) translateY(-50%);
+
+        @media screen and (max-width: 700px) {
+            right: -30px;
+        }
+    }
+
+    .index {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 18px;
+        user-select: none;
+    }
+}

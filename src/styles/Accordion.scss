@@ -1,0 +1,64 @@
+@import 'Vars';
+
+.accordion {
+    padding: 20px 0;
+}
+
+.accordion__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $primary-color;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: $accordions-radius;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.accordion__title:hover,
+.active .accordion__title {
+    cursor: pointer;
+}
+
+.accordion__title::after {
+    position: absolute;
+    height: 16px;
+    width: 18px;
+    top: 17px;
+    right: 20px;
+    content: url("../img/arrow.svg");
+    transition: all .2s ease-in-out;
+}
+
+.active :after {
+    transform: scale(-1);
+    top: 19px;
+}
+
+.accordion__content {
+    border-radius: 0 0 $accordions-radius $accordions-radius;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all .2s ease-in;
+    background-color: $medium-gray;
+    color: $primary-color;
+}
+
+.active .accordion__content {
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    margin-top: -5px;
+    padding: 30px 20px;
+    opacity: 1;
+    line-height: 26px;
+
+    p {
+        margin: 5px 0;
+    }
+}
