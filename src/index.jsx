@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/P7" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/Logement/:id" element={<Logement />} />
         <Route path="/APropos" element={<APropos />} />
         <Route path="*" element={<Error404 />} />

@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import '../styles/Header.scss'
-import logoInsta from '../img/insta.svg'
+import './Header.scss'
+// import logoInsta from '../img/insta.svg'
 
 function Header() {
   return (
     <div className="Header">
       <nav>
-            <ul>
+            <ul className='menu'>
           <li>
             <Link to="/P7">Accueil</Link>
           </li>
@@ -14,12 +14,13 @@ function Header() {
             <Link to="/APropos">A Propos</Link>
           </li>
         </ul>
-        <Link to="/P7">
-        <span className='logo'>Adrien Gonon</span>
+        <Link className='logo' to="/">
+        <span className='logo-span'>Adrien Gonon</span>
         </Link>
+        <div className='social'>
         <a className="insta" href="https://www.instagram.com/adripiks/" target="_blank" rel="noopener noreferrer">
-          {/* <img src={logoInsta} alt="instagram"/> */}
         </a>
+        </div>
       </nav>
     </div>
   )

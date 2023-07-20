@@ -14,11 +14,3 @@ ul {
 a {
     text-decoration: none;
 }
-
-main {
-    padding: 0px 50px;
-
-    @media screen and (max-width: 900px) {
-        padding: 0px 20px;
-    }
-}

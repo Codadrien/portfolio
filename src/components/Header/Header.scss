@@ -1,8 +1,7 @@
-@import 'Vars';
+@import '../../styles/Vars';
 
 nav {
-    padding: 10px 50px;
-    margin: 0 0 20px 0;
+    padding: 20px 50px;
     display: flex;
     align-items: center;
     background-color: #587c54;
@@ -14,7 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    .logo {
+    .logo-span {
         color: white;
         font-size: 25px;
     }
@@ -27,13 +26,30 @@ nav {
         }
     }
 
+    .logo {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu,
+    .social {
+        width: 30%;
+    }
+
+    .social {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .insta {
-        mask-image: url(../img/insta.svg);
-        -webkit-mask-image: url(../img/insta.svg);
+        mask-image: url(../../img/insta.svg);
+        -webkit-mask-image: url(../../img/insta.svg);
         height: 32px;
         width: 32px;
         background-color: white;
         position: relative;
+        display: block;
 
         &:hover {
             &::after {
@@ -45,7 +61,7 @@ nav {
         }
 
         &::after {
-            content: url(../img/background.svg);
+            content: url(../../img/backgroundInsta.svg);
             height: 32px;
             width: 32px;
             position: absolute;
@@ -66,7 +82,7 @@ nav {
             text-decoration: none;
             color: white;
             position: relative;
-            font-size: 24px;
+            font-size: 20px;
 
             @media screen and (max-width: 900px) {
                 font-size: 16px;
@@ -76,7 +92,7 @@ nav {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -2px;
+                bottom: -4px;
                 width: 0;
                 height: 2px;
                 background-color: white;

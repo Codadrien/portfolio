@@ -1,5 +1,5 @@
-import Header from '../../components/Header.jsx'
-import Banner from '../../components/Banner.jsx'
+import Header from '../../components/Header/Header.jsx'
+import Banner from '../../components/Banner/Banner.jsx'
 import Accordion from '../../components/Accordion.jsx'
 import Footer from '../../components/Footer.jsx'
 import logo from '../../img/montagne.png'
