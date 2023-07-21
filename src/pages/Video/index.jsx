@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import dataJsonVideo from '../../data/dataVideo.json'
-import Footer from '../../components/Footer.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 import Header from '../../components/Header/Header.jsx'
 import './Video.scss'
 
@@ -45,7 +45,7 @@ function HomePage() {
                     key={index}
                     width="1200"
                     height="675"
-                    src={youtubeLink}
+                    src={`${youtubeLink}?rel=0`}
                     title={`YouTube Video ${index}`}
                     frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
                   ></iframe>

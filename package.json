@@ -1,6 +1,6 @@
 {
-  "name": "Portfolio",
-  "homepage": "https://codadrien.github.io/portefolio",
+  "name": "portfolio",
+  "homepage": "https://codadrien.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Header from '../../components/Header/Header.jsx'
-import Footer from '../../components/Footer.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 import '../../styles/Error404.scss'
 
 function HomePage() {

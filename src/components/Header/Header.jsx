@@ -11,7 +11,7 @@ function Header() {
             <Link to="/">Accueil</Link>
           </li>
           <li>
-            <Link to="/APropos">A Propos</Link>
+            <Link to="/Photo">Photo</Link>
           </li>
         </ul>
         <Link className='logo' to="/">

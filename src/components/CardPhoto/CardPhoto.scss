@@ -1,0 +1,14 @@
+@import '../../styles/Vars';
+
+.block-photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 80px;
+    justify-content: center;
+}
+
+.card-photo {
+    max-height: 240px;
+    min-height: 180px;
+}

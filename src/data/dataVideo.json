@@ -19,10 +19,10 @@
             "description": "Création d'une chaîne YouTube et réalisation de 4 vidéos pour le Manoir de Kerat"
         },
         "youtubeLink": [
-            "https://www.youtube.com/watch?v=iZ1PoqzQ_Cw",
-            "https://www.youtube.com/watch?v=8rKpHzJdRUE",
-            "https://www.youtube.com/watch?v=Hx3EJCQ9s1Q",
-            "https://www.youtube.com/watch?v=HFkxwMV5f7w"
+            "https://www.youtube.com/embed/iZ1PoqzQ_Cw",
+            "https://www.youtube.com/embed/8rKpHzJdRUE",
+            "https://www.youtube.com/embed/HFkxwMV5f7w",
+            "https://www.youtube.com/embed/Hx3EJCQ9s1Q"
         ]
     },
     {
@@ -45,7 +45,7 @@
             "description": "Réalisation d'une vidéo pour la Crêperie du Port à Vannes"
         },
         "youtubeLink": [
-            "https://www.youtube.com/watch?v=5OpqXqggFGw"
+            "https://www.youtube.com/embed/5OpqXqggFGw"
         ]
     },
     {
@@ -56,8 +56,8 @@
             "description": "Création d'une chaîne Youtube et réalisation de 2 vidéos"
         },
         "youtubeLink": [
-            "https://www.youtube.com/watch?v=HBgnvOMiYCE",
-            "https://www.youtube.com/watch?v=iqE_9SR6NSc"
+            "https://www.youtube.com/embed/HBgnvOMiYCE",
+            "https://www.youtube.com/embed/iqE_9SR6NSc"
         ]
     },
     {
@@ -68,7 +68,7 @@
             "description": "Co-réalisation avec mon frère d'une vidéo de voyage sur notre tour d'Europe en voiture durant l'été 2016"
         },
         "youtubeLink": [
-            "https://www.youtube.com/watch?v=haoFqUv2-qw"
+            "https://www.youtube.com/embed/haoFqUv2-qw"
         ]
     }
 ]
