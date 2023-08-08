@@ -1,58 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import dataJsonVideo from '../../data/dataVideo.json'
-import Footer from '../../components/Footer/Footer.jsx'
 import Header from '../../components/Header/Header.jsx'
+import Banner from '../../components/Banner/Banner.jsx'
+import CardVideo from '../../components/CardVideo/CardVideo.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 import './Video.scss'
+import React, { useState, useEffect } from 'react'
+import dataJson from '../../data/dataVideo.json'
 
 function HomePage() {
-  const [data, setData] = useState(null)
-  let { id } = useParams()
-  const navigate = useNavigate()
+  const [allData, setAllData] = useState([])
 
   useEffect(() => {
-    const foundData = dataJsonVideo.find((item) => item.id === id)
-    if (foundData) {
-      setData(foundData)
-    } else {
-      navigate('/Error404')
-    }
-  }, [id, navigate])
-
-  if (!data) {
-    return null
-  }
+    setAllData(dataJson)
+  }, [])
 
   return (
-    <div>
+    <div className="Video">
       <Header />
-      <main className="main-video">
-        <div className="video-text">
-          <h1 className="video-title">{data.img.title}</h1>
-          <p className="video-description">{data.img.description}</p>
+      <main>
+        <Banner
+          title="Vidéo"
+          subTitle="Faites défiler vers le bas pour en voir plus"
+          src="https://cdn.myportfolio.com/d46a2f23-8a1d-419d-874e-7fa986feecf9/bca4f858-dd80-46c4-bdef-27e4761d1901_rw_3840.jpg?h=87363b3a83069d13f4e69cc44b34cb57"
+          alt="payage montblanc lune"
+        />
+        <div className="block-cards">
+          <CardVideo allData={allData} />
         </div>
-          {data.link? (
-          <div className="video-part">
-            <a target="_blank" rel="noreferrer" href={data.link.url}>
-            <img className="video-img" src={data.img.src} alt={data.img.title} />
-            </a>
-            <a target="_blank" rel="noreferrer" className="button" href={data.link.url} >{data.link.title}</a>
-          </div>
-        ):(
-          <div className="video-part">
-           {data.youtubeLink.map((youtubeLink, index) => (
-                  <iframe
-                    key={index}
-                    width="1200"
-                    height="675"
-                    src={`${youtubeLink}?rel=0`}
-                    title={`YouTube Video ${index}`}
-                    frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
-                  ></iframe>
-                ))}
-          </div>
-        )}
-        </main>
+      </main>
       <Footer />
     </div>
   )

@@ -7,9 +7,9 @@
         width: 100%;
         object-fit: cover;
 
-        @media screen and (max-width: 900px) {
-            height: 300px;
-        }
+        // @media screen and (max-width: 900px) {
+        //     height: 300px;
+        // }
     }
 
     .banner-text {
@@ -19,6 +19,8 @@
         transform: translate(-50%, -50%);
         margin: 0;
         z-index: 1;
+        width: 80vw;
+
 
         .banner-title {
             font-weight: 500;
@@ -28,15 +30,6 @@
 
             @media screen and (max-width: 1300px) {
                 font-size: 32px;
-            }
-
-            @media screen and (max-width: 900px) {
-                font-size: 24px;
-                text-align: left;
-                top: 50%;
-                left: 20px;
-                transform: translateY(-50%);
-                width: 50%;
             }
         }
 

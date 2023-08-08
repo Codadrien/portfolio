@@ -4,7 +4,7 @@ nav {
     padding: 20px 50px;
     display: flex;
     align-items: center;
-    background-color: #587c54;
+    background-color: $primary-color;
 
     @media screen and (max-width: 900px) {
         padding: 30px 20px;
@@ -16,6 +16,22 @@ nav {
     .logo-span {
         color: white;
         font-size: 25px;
+
+        @media screen and (max-width: 900px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 750px) {
+            content: url(../../img/logo.png);
+            height: 65px;
+            position: absolute;
+            top: 12px;
+        }
+
+        @media screen and (max-width: 550px) {
+            right: 72px;
+
+        }
     }
 
     img {
@@ -77,6 +93,10 @@ nav {
         display: flex;
         align-items: center;
         gap: 50px;
+
+        @media screen and (max-width: 750px) {
+            gap: 30px;
+        }
 
         a {
             text-decoration: none;

@@ -5,7 +5,7 @@ function Card({ allData }) {
   return (
     <>
       {allData.map((data) => (
-        <Link className="card" key={data.id} to={`/Video/${data.id}`}>
+        <Link className="card" key={data.id} to={`/VideoLink/${data.id}`}>
           <h2 className="title">{data.img.title}</h2>
           <img className="card-img" src={data.img.src} alt={data.img.title} />
         </Link>

@@ -1,7 +1,8 @@
-@import 'Vars';
+@import '../../styles/Vars';
+
 
 .error404 {
-    color: $primary-color;
+    color: darken($primary-color, 10);
     display: flex;
     flex-direction: column;
     align-items: center;

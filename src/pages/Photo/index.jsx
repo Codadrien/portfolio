@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+// import { useParams, useNavigate } from 'react-router-dom'
 import Header from '../../components/Header/Header.jsx'
 import Banner from '../../components/Banner/Banner.jsx'
 import CardPhoto from '../../components/CardPhoto/CardPhoto.jsx'

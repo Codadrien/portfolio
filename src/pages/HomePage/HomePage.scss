@@ -1,0 +1,33 @@
+@import '../../styles/Vars';
+
+.block-description {
+    display: flex;
+    padding: 100px 40px;
+    background-color: #1a1a1a;
+    justify-content: center;
+    color: white;
+
+    .title {
+        font-size: 20px;
+    }
+
+    p {
+        margin: 15px 0;
+    }
+
+    .text-part {
+        width: fit-content;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #3a3a3a;
+    }
+
+
+    // @media screen and (max-width: 1300px) {
+    //     gap: 25px;
+    // }
+
+    // @media screen and (max-width: 900px) {
+    //     padding: 0;
+    // }
+}
