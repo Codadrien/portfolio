@@ -18,7 +18,7 @@ function Card({ allData }) {
             height="1000"
             crop="scale"
             // alt={data.img.title}
-            className="card-photo"
+            className="card-img"
           />
         </Link>
       ))}
