@@ -4,6 +4,11 @@ import dataJsonVideo from '../../data/dataVideo.json'
 import Footer from '../../components/Footer/Footer.jsx'
 import Header from '../../components/Header/Header.jsx'
 import './VideoLink.scss'
+import { Image } from 'cloudinary-react';
+
+
+// Configurer Cloudinary (remplacez 'your_cloud_name' par votre nom de cloud Cloudinary)
+const cloudName = 'dohyiersk';
 
 function VideoLink() {
   const [data, setData] = useState(null)
@@ -34,21 +39,31 @@ function VideoLink() {
           {data.link? (
           <div className="video-part">
             <a target="_blank" rel="noreferrer" href={data.link.url}>
-            <img className="video-img" src={data.img.src} alt={data.img.title} />
+             <Image
+            cloudName={cloudName}
+            publicId={`portfolio/${data.img.public_id}`} // Inclure le dossier "portfolio/"
+            width="auto"
+            height="1000"
+            crop="scale"
+            alt={data.img.title}
+            className="card-photo"
+          />
             </a>
             <a target="_blank" rel="noreferrer" className="button" href={data.link.url} >{data.link.title}</a>
           </div>
         ):(
           <div className="video-part">
            {data.youtubeLink.map((youtubeLink, index) => (
+            <div  className='video-container'>
                   <iframe
-                    key={index}
                     width="1200"
                     height="675"
+                    key={index}
                     src={`${youtubeLink}?rel=0`}
                     title={`YouTube Video ${index}`}
                     frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen
                   ></iframe>
+            </div>
                 ))}
           </div>
         )}

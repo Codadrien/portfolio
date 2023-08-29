@@ -13,7 +13,7 @@ function HomePage() {
         <Banner
           title="Bienvenue sur mon portfolio"
           subTitle="Faites défiler vers le bas pour en voir plus"
-          src="https://cdn.myportfolio.com/d46a2f23-8a1d-419d-874e-7fa986feecf9/bca4f858-dd80-46c4-bdef-27e4761d1901_rw_3840.jpg?h=87363b3a83069d13f4e69cc44b34cb57"
+          src="http://res.cloudinary.com/dohyiersk/image/upload/c_scale,w_auto/v1/portfolio/13_ouuhr7"
           alt="payage montblanc lune"
         />
         <div className="block-description">

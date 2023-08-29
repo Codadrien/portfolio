@@ -6,6 +6,7 @@ import CardPhoto from '../../components/CardPhoto/CardPhoto.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import './Photo.scss'
 import dataJsonPhoto from '../../data/dataPhoto.json'
+import insta from '../../img/insta.png'
 
 function Photo() {
   const [allData, setAllData] = useState([])
@@ -20,7 +21,7 @@ function Photo() {
         <Banner
           title="Photo"
           subTitle="Faites défiler vers le bas pour en voir plus"
-          src="https://cdn.myportfolio.com/d46a2f23-8a1d-419d-874e-7fa986feecf9/bca4f858-dd80-46c4-bdef-27e4761d1901_rw_3840.jpg?h=87363b3a83069d13f4e69cc44b34cb57"
+          src="http://res.cloudinary.com/dohyiersk/image/upload/c_scale,w_auto/v1/portfolio/13_ouuhr7"
           alt="payage montblanc lune"
         />
       <main className="main-photo">
@@ -28,7 +29,7 @@ function Photo() {
           <h1 className="photo-title">Photo</h1>
           <p className="photo-description">Je fais des photos depuis l'âge de 13 ans que je publie sur mon compte Instagram</p>
           <a target="_blank" rel="noreferrer" href="https://www.instagram.com/adripiks/">
-            <img src="https://cdn.myportfolio.com/d46a2f23-8a1d-419d-874e-7fa986feecf9/22f09f7d-10ef-4902-a226-9e025861c2e2_rw_600.png?h=2a4d307c8686d34c9459cbd3c239be10" alt="instagram" />
+            <img className='instaImg' src={insta} alt="instagram" />
           </a>
         </div>
           <CardPhoto allData={allData} />

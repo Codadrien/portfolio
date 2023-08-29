@@ -8,11 +8,17 @@ const cloudName = 'dohyiersk';
 function CardPhoto({ allData }) {
   const [currentId, setCurrentId] = useState("25_etksxe");
   const [currentIndex, setCurrentIndex] = useState(0);
-   const [jsInitialized, setJsInitialized] = useState(false); // Ajouter un nouvel état pour suivre si le JS a été initialisé
+  const [jsInitialized, setJsInitialized] = useState(false); // Ajouter un nouvel état pour suivre si le JS a été initialisé
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
 
   const handleCardClick = (publicId, index) => {
     setCurrentId(publicId);
     setCurrentIndex(index);
+    setIsLoading(true); // Réinitialiser l'état de chargement lorsque l'image change
   };
 
   const handleNextImage = () => {
@@ -34,6 +40,7 @@ function CardPhoto({ allData }) {
         init();
       });
        setJsInitialized(true); // Marquer l'initialisation du JS comme terminée
+       setIsLoading(false);
  }, [currentId, jsInitialized]);
 
   return (
@@ -58,7 +65,16 @@ function CardPhoto({ allData }) {
       ))}
       {currentId !== undefined && (
         <div className='js-pic-full-height'>
+            {isLoading ? (
+            <div className="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          ) : (
            <Image
+              onLoad={handleImageLoad}
               cloudName={cloudName}
               publicId={`portfolio/${currentId}`} // Inclure le dossier "portfolio/"
               width="auto"
@@ -66,6 +82,7 @@ function CardPhoto({ allData }) {
               // alt={data.img.title}
               className="pic-full-height"
             />
+            )}
             <div className='swiperPrev' onClick={handlePrevImage}></div>
             <div className='swiperNext' onClick={handleNextImage}></div>
             <div className='close'></div>
