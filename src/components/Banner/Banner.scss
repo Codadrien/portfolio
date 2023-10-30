@@ -2,14 +2,19 @@
     position: relative;
     display: flex;
 
-    .banner-img {
-        height: 100vh;
+    .banner-img,
+    .banner-video {
+        height: calc(100vh - 72px);
         width: 100%;
         object-fit: cover;
 
         // @media screen and (max-width: 900px) {
         //     height: 300px;
         // }
+    }
+
+    .photo-drone {
+        object-position: bottom;
     }
 
     .banner-text {

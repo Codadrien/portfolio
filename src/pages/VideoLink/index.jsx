@@ -46,7 +46,7 @@ function VideoLink() {
             height="1000"
             crop="scale"
             alt={data.img.title}
-            className="card-photo"
+            className="thumbnail"
           />
             </a>
             <a target="_blank" rel="noreferrer" className="button" href={data.link.url} >{data.link.title}</a>

@@ -2,6 +2,17 @@
     {
         "id": "1",
         "img": {
+            "public_id": "ozgcngzppq9dmxfcbwep",
+            "title": "Les Musicales du Golfe",
+            "description": "Réalisation d'une vidéo pour la cloture du festival des Musicales du Golfe"
+        },
+        "youtubeLink": [
+            "https://www.youtube.com/embed/5zw7ge4GUF8?si=S1likphbVUmhoYQb"
+        ]
+    },
+    {
+        "id": "2",
+        "img": {
             "public_id": "zxo8kumovtsfwdtrivrj",
             "title": "Royalenfield",
             "description": "Réalisation d'une vidéo au format 'Réels' pour mon compte Instagram"
@@ -12,7 +23,7 @@
         }
     },
     {
-        "id": "2",
+        "id": "3",
         "img": {
             "public_id": "h1krclkynm1kcszrgsiw",
             "title": "Manoir de Kerat",
@@ -26,7 +37,7 @@
         ]
     },
     {
-        "id": "3",
+        "id": "4",
         "img": {
             "public_id": "ahbcada9tx5snah3ayck",
             "title": "Century 21",
@@ -38,7 +49,7 @@
         }
     },
     {
-        "id": "4",
+        "id": "5",
         "img": {
             "public_id": "bg32k8ytik9cmyz9peb0",
             "title": "Créperie du Port",
@@ -49,7 +60,7 @@
         ]
     },
     {
-        "id": "5",
+        "id": "6",
         "img": {
             "public_id": "oq78zspivh7ppe7b4st8",
             "title": "Galerie de Funambule",
@@ -61,7 +72,7 @@
         ]
     },
     {
-        "id": "6",
+        "id": "7",
         "img": {
             "public_id": "avecl7fknonbuekil867",
             "title": "Tour d'Europe en voiture",

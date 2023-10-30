@@ -21,8 +21,9 @@ function Photo() {
         <Banner
           title="Photo"
           subTitle="Faites défiler vers le bas pour en voir plus"
-          src="http://res.cloudinary.com/dohyiersk/image/upload/c_scale,w_auto/v1/portfolio/13_ouuhr7"
+          src="http://res.cloudinary.com/dohyiersk/image/upload/c_scale,w_auto/v1/portfolio/20_dquvwi"
           alt="payage montblanc lune"
+          classImg={allData.find((item) => item.public_id === "20_dquvwi")?.classImg}
         />
       <main className="main-photo">
         <div className="photo-text">

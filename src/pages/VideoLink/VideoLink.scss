@@ -1,6 +1,19 @@
 @import '../../styles/Vars';
 
 
+.thumbnail {
+    max-height: 50vh;
+    min-height: 180px;
+    cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+        max-height: unset;
+        min-height: unset;
+        width: 100%;
+        height: auto;
+    }
+}
+
 .top-part {
     display: flex;
     justify-content: space-between;
@@ -32,7 +45,7 @@
 }
 
 .video-description {
-    color: #888888;
+    color: #c5c5c5;
     font-size: 20px;
 }
 

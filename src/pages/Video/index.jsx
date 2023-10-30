@@ -20,7 +20,7 @@ function HomePage() {
         <Banner
           title="Vidéo"
           subTitle="Faites défiler vers le bas pour en voir plus"
-          src="http://res.cloudinary.com/dohyiersk/image/upload/c_scale,w_auto/v1/portfolio/13_ouuhr7"
+          src="https://res.cloudinary.com/dohyiersk/video/upload/f_auto:video,q_99/v1/portfolio/fbwobxbntqjfjjeqlvq3"
           alt="payage montblanc lune"
         />
         <div className="block-cards">
