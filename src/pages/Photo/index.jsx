@@ -29,7 +29,7 @@ function Photo() {
         <div className="photo-text">
           <h1 className="photo-title">Photo</h1>
           <p className="photo-description">Je fais des photos depuis l'âge de 13 ans que je publie sur mon compte Instagram</p>
-          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/adripiks/">
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/adriengonon_/">
             <img className='instaImg' src={insta} alt="instagram" />
           </a>
         </div>

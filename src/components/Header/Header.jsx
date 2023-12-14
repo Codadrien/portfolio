@@ -21,7 +21,7 @@ function Header() {
         <span className='logo-span'>Adrien Gonon</span>
         </Link>
         <div className='social'>
-        <a className="insta" href="https://www.instagram.com/adripiks/" target="_blank" rel="noopener noreferrer">
+        <a className="insta" href="https://www.instagram.com/adriengonon_/" target="_blank" rel="noopener noreferrer">
         </a>
         </div>
       </nav>
