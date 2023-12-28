@@ -28,7 +28,7 @@ function Photo() {
       <main className="main-photo">
         <div className="photo-text">
           <h1 className="photo-title">Photo</h1>
-          <p className="photo-description">Je fais des photos depuis l'âge de 13 ans que je publie sur mon compte Instagram</p>
+          <p className="photo-description">Je fais de la photo depuis plus de 10 ans que je publie sur mon compte Instagram</p>
           <a target="_blank" rel="noreferrer" href="https://www.instagram.com/adriengonon_/">
             <img className='instaImg' src={insta} alt="instagram" />
           </a>
