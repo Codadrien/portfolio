@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 16  # Mise à jour de la version de Node.js à 16
 
     - name: Install dependencies
       run: npm install
@@ -30,5 +30,5 @@ jobs:
         server: ${{ fromJSON(secrets.FTP_CREDENTIALS).server }}
         username: ${{ fromJSON(secrets.FTP_CREDENTIALS).username }}
         password: ${{ fromJSON(secrets.FTP_CREDENTIALS).password }}
-        local-dir: build
-        remote-dir: /www
+        local-dir: build/
+        server-dir: /www  # Utilisation de 'server-dir' au lieu de 'remote-dir'
