@@ -50,7 +50,7 @@ jobs:
         username: ${{ fromJSON(secrets.FTP_CREDENTIALS).username }}
         password: ${{ fromJSON(secrets.FTP_CREDENTIALS).password }}
         local-dir: frontend/build/
-        server-dir: /www/frontend/
+        server-dir: /www/  # Changement ici pour déployer à la racine
 
     # Deployment with FTP for backend
     - name: Deploy backend to OVH
