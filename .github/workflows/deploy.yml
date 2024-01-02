@@ -18,27 +18,31 @@ jobs:
       with:
         node-version: 16
 
-    # Débogage : Lister les répertoires dans l'espace de travail GitHub pour confirmer la structure
+    # Debug: List directories in the GitHub workspace to confirm structure
     - name: List directories in the GitHub workspace
-      run: dir "$GITHUB_WORKSPACE"
+      run: dir
+      shell: cmd
 
     - name: Install dependencies for frontend
       run: |
-        cd "$GITHUB_WORKSPACE\frontend"
+        cd /d "%GITHUB_WORKSPACE%\frontend"
         npm install
+      shell: cmd
 
     - name: Build frontend
       run: |
-        cd "$GITHUB_WORKSPACE\frontend"
+        cd /d "%GITHUB_WORKSPACE%\frontend"
         npm run build
+      shell: cmd
 
-    # Débogage : Lister le contenu du répertoire build
+    # Debug: List build directory contents
     - name: List build directory contents
       run: |
-        cd "$GITHUB_WORKSPACE\frontend"
+        cd /d "%GITHUB_WORKSPACE%\frontend"
         dir build
+      shell: cmd
 
-    # Déploiement via FTP
+    # Deployment with FTP
     - name: Deploy to OVH
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
