@@ -1,0 +1,32 @@
+# Ignorer les fichiers et dossiers de base de WordPress
+/wp-admin/
+/wp-includes/
+
+# Autoriser wp-content, mais exclure certains contenus
+!/wp-content/
+/wp-content/plugins/
+/wp-content/themes/
+/wp-content/uploads/
+
+# Exclure les fichiers de configuration sensibles et les fichiers racine non nécessaires
+/.htaccess
+/wp-config.php
+/xmlrpc.php
+/readme.html
+/license.txt
+
+# Fichiers de système et de cache
+*.log
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Fichiers de base de données
+*.sql
+*.sqlite
+
+# Dossiers de développement
+/node_modules/
+/vendor/
