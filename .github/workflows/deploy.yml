@@ -18,12 +18,17 @@ jobs:
       with:
         node-version: 16
 
-    # Debug: List directories in the GitHub workspace to confirm structure
-    - name: List directories in the GitHub workspace
-      run: dir
-      shell: cmd
+    - name: Cache Node modules
+      uses: actions/cache@v2
+      with:
+        path: |
+          frontend/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('frontend/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies for frontend
+      if: steps.cache.outputs.cache-hit != 'true'
       run: |
         cd /d "%GITHUB_WORKSPACE%\\frontend"
         npm install
