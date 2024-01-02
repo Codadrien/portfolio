@@ -14,7 +14,7 @@ function VideoLink() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://adriengonon.fr/backend/wordpress/wp-json/wp/v2/video/${id}?acf_format=standard`)
+    axios.get(`https://adriengonon.fr/backend/wordpress/wp-json/wp/v2/video/${id}?acf_format=standard`)
       .then(response => {
         setData(response.data);
       })

@@ -13,7 +13,7 @@ function Card({ allData }) {
 
   useEffect(() => {
     // Récupérer les données lors du montage du composant
-    axios.get('http://adriengonon.fr/backend/wordpress/wp-json/wp/v2/video/?acf_format=standard')
+    axios.get('https://adriengonon.fr/backend/wordpress/wp-json/wp/v2/video/?acf_format=standard')
       .then(response => {
         // Mettre à jour l'état avec les données récupérées
         setVideos(response.data);
