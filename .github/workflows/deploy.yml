@@ -18,20 +18,34 @@ jobs:
       with:
         node-version: 16
 
-    - name: Change directory to frontend
-      run: cd $GITHUB_WORKSPACE/frontend
+    # Ajout d'une étape pour lister le contenu du répertoire de travail
+    - name: List directories in the GitHub workspace
+      run: dir "$GITHUB_WORKSPACE"
+
+    # Changement de répertoire avec confirmation
+    - name: Change directory to frontend and confirm
+      run: |
+        cd "$GITHUB_WORKSPACE\frontend"
+        echo "Current directory:"
+        dir
 
     - name: Install dependencies
       run: npm install
 
+    # Confirmation que les dépendances sont installées correctement
+    - name: List node_modules
+      run: |
+        cd "$GITHUB_WORKSPACE\frontend"
+        dir node_modules
+
     - name: Build
       run: npm run build
 
-    - name: Deploy to OVH
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ${{ fromJSON(secrets.FTP_CREDENTIALS).server }}
-        username: ${{ fromJSON(secrets.FTP_CREDENTIALS).username }}
-        password: ${{ fromJSON(secrets.FTP_CREDENTIALS).password }}
-        local-dir: build/
-        server-dir: /www/
+    # Vérification du contenu du dossier build après la construction
+    - name: List build directory
+      run: |
+        cd "$GITHUB_WORKSPACE\frontend"
+        dir build
+
+    # Déploiement avec FTP
+    - name:
