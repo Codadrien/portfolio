@@ -19,7 +19,7 @@ jobs:
         node-version: 16
 
     - name: Change directory to frontend
-      run: cd ../../frontend
+      run: cd $GITHUB_WORKSPACE/frontend
 
     - name: Install dependencies
       run: npm install
