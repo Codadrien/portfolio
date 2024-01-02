@@ -25,29 +25,39 @@ jobs:
 
     - name: Install dependencies for frontend
       run: |
-        cd /d "%GITHUB_WORKSPACE%\frontend"
+        cd /d "%GITHUB_WORKSPACE%\\frontend"
         npm install
       shell: cmd
 
     - name: Build frontend
       run: |
-        cd /d "%GITHUB_WORKSPACE%\frontend"
+        cd /d "%GITHUB_WORKSPACE%\\frontend"
         npm run build
       shell: cmd
 
     # Debug: List build directory contents
     - name: List build directory contents
       run: |
-        cd /d "%GITHUB_WORKSPACE%\frontend"
+        cd /d "%GITHUB_WORKSPACE%\\frontend"
         dir build
       shell: cmd
 
-    # Deployment with FTP
-    - name: Deploy to OVH
+    # Deployment with FTP for frontend
+    - name: Deploy frontend to OVH
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ${{ fromJSON(secrets.FTP_CREDENTIALS).server }}
         username: ${{ fromJSON(secrets.FTP_CREDENTIALS).username }}
         password: ${{ fromJSON(secrets.FTP_CREDENTIALS).password }}
         local-dir: frontend/build/
-        server-dir: /www/
+        server-dir: /www/frontend/
+
+    # Deployment with FTP for backend
+    - name: Deploy backend to OVH
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ fromJSON(secrets.FTP_CREDENTIALS).server }}
+        username: ${{ fromJSON(secrets.FTP_CREDENTIALS).username }}
+        password: ${{ fromJSON(secrets.FTP_CREDENTIALS).password }}
+        local-dir: backend/
+        server-dir: /www/backend/
